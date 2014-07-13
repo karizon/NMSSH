@@ -29,7 +29,7 @@ typedef NS_OPTIONS(NSUInteger, NMSSHLogFlag) {
     dispatch_once(&onceToken, ^{
         logger = [[NMSSHLogger alloc] init];
         [logger setEnabled:YES];
-        [logger setLogLevel:NMSSHLogLevelVerbose];
+        [logger setLogLevel:NMSSHLogLevelError];
         [logger setLogBlock:^(NMSSHLogLevel level, NSString *format) {
             NSLog(@"%@", format);
         }];
